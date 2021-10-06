@@ -4,9 +4,9 @@ import shortid from 'shortid';
 
 export default function FeedbackOptions({options,onLeaveFeedback}) {
     return (
-        <div className={styles.feedbackOptions}>
+        <div>
             {options.map(option => (
-                <button key={shortid.generate()} type="button" name={option} onClick={onLeaveFeedback}>{option}</button>
+                <button className={styles.btn} key={shortid.generate()} type="button" name={option} onClick={onLeaveFeedback}>{option}</button>
             ))}
            
         </div>        

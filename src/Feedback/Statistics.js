@@ -8,7 +8,7 @@ export default function Statistics({good,neutral,bad,total,positivePercentage}) 
                     <p className={styles.statistics__item}>Neutral: {neutral}</p>
                     <p className={styles.statistics__item}>Bad: {bad}</p>
                     <p className={styles.statistics__item}>Total: {total}</p>
-                    <p className={styles.statistics__item}>Total: {positivePercentage}%</p>
+                    <p className={styles.statistics__item}>Positive feedback: {positivePercentage}%</p>
                 </div>
     );
 }

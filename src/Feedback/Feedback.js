@@ -4,11 +4,6 @@ import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Notification from './Notification';
 
-// const optionState = {
-//   good: 0,
-//   neutral: 0,
-//   bad: 0
-// }
 
 class Feedback extends React.Component {
     state = {

@@ -1,12 +1,19 @@
 import styles from './Feedback.module.css';
+import PropTypes from 'prop-types'
+import shortid from 'shortid';
 
-export default function FeedbackOptions({onGood,onNeutral,onBad}) {
+export default function FeedbackOptions({options,onLeaveFeedback}) {
     return (
         <div className={styles.feedbackOptions}>
-            <button type="button" onClick={onGood}>good</button>
-            <button type="button" onClick={onNeutral}>neutral</button>
-            <button type="button" onClick={onBad}>bad</button>
-        </div>
-        
+            {options.map(option => (
+                <button key={shortid.generate()} type="button" name={option} onClick={onLeaveFeedback}>{option}</button>
+            ))}
+           
+        </div>        
     );
+}
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.array,
+    onLeaveFeedback: PropTypes.func
 }

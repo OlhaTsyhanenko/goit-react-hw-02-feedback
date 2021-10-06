@@ -1,5 +1,6 @@
 
 import styles from './Feedback.module.css';
+import PropTypes from 'prop-types'
 
 export default function Statistics({good,neutral,bad,total,positivePercentage}) {
     return (
@@ -11,4 +12,12 @@ export default function Statistics({good,neutral,bad,total,positivePercentage}) 
                     <p className={styles.statistics__item}>Positive feedback: {positivePercentage}%</p>
                 </div>
     );
+}
+
+Statistics.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    positivePercentage: PropTypes.number
 }
